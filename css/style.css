@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+	background-color: #232323;
+	color: #ffffff;
+	font-size: 24px;
+	background-attachment: fixed;
+    font-family: 'Crete Round', serif;
+    cursor: default;
+}
+.GlobalContainer {
+    width: 100%;
+    height: auto;
+}
+.ContentContainer {
+    width: 50%;
+    height: auto;
+}
+.MenuButton {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    z-index: 100;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.MenuButton:hover {
+    background-color: #343434;
+    box-shadow: 0px 0px 10px #343434;
+}
+.Menu {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    width: 20%;
+    height: 100%;
+    z-index: 50;
+    background-color: #121212;
+    border: 1px solid #111111;
+    box-shadow: 0px 0px 10px #111111;
+    display: none;
+    transition: .2s ease-in-out;
+}
+.MenuUp {
+    display: flex;
+    transform: translateX(100%);
+    animation-name: MenuShowUp;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes MenuShowUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+.MenuDown {
+    display: flex;
+    animation-name: MenuShowDown;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    transform: translateX(0%);
+}
+@keyframes MenuShowDown {
+    0% {
+        
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+.ListContainer {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    font-family: 'Gugi', cursive;
+}
+.SingleMenuElement {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    transition: .2s ease-in-out;
+    cursor: pointer; 
+    list-style-type: none;
+}
+.SingleMenuElement:hover {
+    background-color: #ffffff;
+    color: #111111;
+    box-shadow: 0px 0px 10px #ffffff;
+}
+.SingleMenuElement--Clicked {
+    background-color: #0074FF;
+    color: #ffffff;
+    box-shadow: 0px 0px 10px #0074FF;
+    z-index: -50;
+}
+.SingleMenuElement:first-of-type {
+    border-radius: 10px 10px 0px 0px;
+}
+.SingleMenuElement:last-of-type {
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 0px;
+}
+.Logo {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    font-size: 48px;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 15px #ffffff;
+    font-family: 'Gugi', cursive;
+    box-sizing: border-box;
+}
+.ContextContainer {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.SingleContentElement {
+    width: 100%;
+}
+.SystemHeaderContainer {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.SystemHeader {
+    font-size: 32px;
+    font-weight: 900;
+    text-decoration: underline;
+}
+.SystemDescriptionContainer {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.SystemDescription:first-of-type {
+    margin-top: 0px;
+}
+.SystemDescriptionHeader {
+    font-weight: 600;
+}
+.SystemImageContainer {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    height: auto;
+}
+.SystemImage {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #111111;
+    box-shadow: 0px 0px 10px #111111;
+}
+.ImageInformation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Image {
+    width: 100%;
+    height: 100%;
+}
+.ImageWithNoBackground {
+    background-color: #ffffff;
+}
+.ImageDescription {
+    color: #ffffff;
+    margin: 0;
+    font-size: 32px;
+}
+.ImageInformation .ImageDescription {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #111;
+    left: 0px;
+    bottom: 0px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.ImageInformation:hover .ImageDescription {
+    opacity: 0.8;
+}
+.TabelOfParamethers {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    box-sizing: border-box
+}
+.ParamethersHeaderContainer {
+    width: 100%;
+    padding: 15px 15px 15px 0px;
+    box-sizing: border-box;
+}
+.ParamethersHeader {
+    font-size: 28px;
+    font-weight: 700;
+}
+.Paramethers {
+    border: 1px solid #111111;
+    border-collapse: collapse;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.Paramethers td {
+    border: 1px solid #0074FF;
+    padding: 5px;
+}
+.Paramethers th {
+    border: 2px solid #FF0000;
+    padding: 5px;
+}
+.Footer {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.FooterText {
+    font-size: 19px;
+}
+.UsedSourcesButton {
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.UsedSourcesButton:hover {
+    color: #ff0000;
+}
+.SourcesList {
+    margin: 0px;
+    list-style-type: square;
+}
+::-webkit-scrollbar {
+ width: 10px;
+}
+::-webkit-scrollbar-track {
+ background-color: #232323;
+}
+::-webkit-scrollbar-thumb {
+ background: #343434;
+ border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+ background: #121212;
+}

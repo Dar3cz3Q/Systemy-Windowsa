@@ -1,0 +1,53 @@
+.FlexStyle {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.FlexStyle--Row {
+    flex-direction: row;
+}
+.FlexStyle--Column {
+    flex-direction: column;
+}
+.HiddenElement {
+    display: none;
+}
+.SeperatingLine {
+    width: 100%;
+    height: 1px;
+    margin: 10px 0px;
+    background-color: #0074FF;
+}
+.PageLoading {
+	background-color: #232323;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	transition: opacity .35s ease;
+}
+.PageLoading.Preloader-Hidding {
+	opacity: 0;
+}
+.PageLoading.Preloader-Hidden {
+	display: none;
+}
+.AnimatedIcon {
+    font-size: 72px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+}
+.Link {
+    color: inherit;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.Link:hover {
+    color: #007CFF;
+}
