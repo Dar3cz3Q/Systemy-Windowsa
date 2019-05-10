@@ -57,38 +57,38 @@ function FirstLoad () {
 }
 
 function ChangeContent() {
-        var system_unique = $(this).data("system");
-        $(".SingleMenuElement").removeClass("SingleMenuElement--Clicked");
-        if (system_unique === 0) {
+    var system_unique = $(this).data("system");
+    $(".SingleMenuElement").removeClass("SingleMenuElement--Clicked");
+    if (system_unique === 0) {
 
-        } else {
-            $(this).addClass("SingleMenuElement--Clicked");
-        }
+    } else {
+        $(this).addClass("SingleMenuElement--Clicked");
+    }
 
-        Show(false, system_unique);
+    Show(false, system_unique);
 
-        const number_define = [
-            "Wykorzystane źródła",
-            "Geneza powstania",
-            "Windows 3.0",
-            "OS/2",
-            "Windows 3.1 i NT",
-            "Windows 95",
-            "Windows NT 4.0",
-            "Windows 98",
-            "Windows 2000",
-            "Windows Me",
-            "Windows XP",
-            "Windows Vista",
-            "Windows 7",
-            "Windows 8",
-            "Windows 8.1",
-            "Windows 10",
-        ];
+    const number_define = [
+        "Wykorzystane źródła",
+        "Geneza powstania",
+        "Windows 3.0",
+        "OS/2",
+        "Windows 3.1 i NT",
+        "Windows 95",
+        "Windows NT 4.0",
+        "Windows 98",
+        "Windows 2000",
+        "Windows Me",
+        "Windows XP",
+        "Windows Vista",
+        "Windows 7",
+        "Windows 8",
+        "Windows 8.1",
+        "Windows 10",
+    ];
 
-        $(".SingleContentElement").addClass("HiddenElement");
+    $(".SingleContentElement").addClass("HiddenElement");
 
-        document.getElementsByClassName("SingleContentElement")[system_unique].classList.remove("HiddenElement");
-        document.title = 'Systemy Windows - ' + number_define[system_unique] + '';
-    
+    document.getElementsByClassName("SingleContentElement")[system_unique].classList.remove("HiddenElement");
+    document.title = 'Systemy Windows - ' + number_define[system_unique] + '';
+    $(window).scrollTop(0);
 }

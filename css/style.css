@@ -41,13 +41,13 @@ body {
     border: 1px solid #111111;
     box-shadow: 0px 0px 10px #111111;
     display: none;
-    transition: .2s ease-in-out;
+    transition: .35s ease-in-out;
 }
 .MenuUp {
     display: flex;
     transform: translateX(100%);
     animation-name: MenuShowUp;
-    animation-duration: .5s;
+    animation-duration: .2s;
     animation-fill-mode: forwards;
 }
 @keyframes MenuShowUp {
@@ -61,7 +61,7 @@ body {
 .MenuDown {
     display: flex;
     animation-name: MenuShowDown;
-    animation-duration: .5s;
+    animation-duration: .2s;
     animation-fill-mode: forwards;
     transform: translateX(0%);
 }
@@ -220,6 +220,22 @@ body {
     text-align: center;
     box-sizing: border-box;
 }
+.HistoryTable {
+    border: 1px solid #a2a9b1;
+    border-collapse: collapse;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.HistoryTable td {
+    border: 1px solid #a2a9b1;
+    padding: 5px;
+}
+.HistoryTable th {
+    border: 2px solid #a2a9b1;
+    padding: 5px;
+}
 .Paramethers td {
     border: 1px solid #0074FF;
     padding: 5px;
@@ -227,6 +243,25 @@ body {
 .Paramethers th {
     border: 2px solid #FF0000;
     padding: 5px;
+}
+.HistoryTable .Postscript {
+    font-size: 12px;
+}
+.HistoryTable .Unsupported {
+    background-color: Salmon;
+}
+.HistoryTable .Supported--Half {
+    background-color: #F0E68C;
+}
+.HistoryTable .Supported {
+    background-color: #A0E75A;
+}
+.HistoryTable .Testing {
+    background-color: #ADD8E6;
+}
+.BlackFont {
+    color: #000000;
+    background-color: #eaecf0;
 }
 .Footer {
     width: 100%;
