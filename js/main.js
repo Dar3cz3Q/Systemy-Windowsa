@@ -7,6 +7,16 @@ window.addEventListener('load', function () {
     });
 });
 
+window.addEventListener("blur", function () {
+    document.title = 'Powrót do systemów';
+})
+
+window.addEventListener("focus", function () {
+    var url = location.href;
+    var adres = url.slice(url.lastIndexOf("#")+1, url.lastIndexOf(""));
+    document.title = 'Systemy Windows - ' + adres + '';
+})
+
 window.addEventListener("load", SetListeners);
 
 window.addEventListener("load", FirstLoad);
@@ -53,6 +63,7 @@ function Show(status, unique) {
 function FirstLoad () {
     $(".SingleContentElement").addClass("HiddenElement");
     document.getElementsByClassName("SingleContentElement")[1].classList.remove("HiddenElement");
+    document.location.href = "#Geneza-powstania";
     document.getElementsByClassName("SingleMenuElement")[0].classList.add("SingleMenuElement--Clicked");
 }
 
