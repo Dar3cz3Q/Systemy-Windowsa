@@ -47,7 +47,7 @@ body {
     display: flex;
     transform: translateX(100%);
     animation-name: MenuShowUp;
-    animation-duration: .2s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
 }
 @keyframes MenuShowUp {
@@ -61,7 +61,7 @@ body {
 .MenuDown {
     display: flex;
     animation-name: MenuShowDown;
-    animation-duration: .2s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
     transform: translateX(0%);
 }
