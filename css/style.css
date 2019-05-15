@@ -275,6 +275,7 @@ body {
 .UsedSourcesButton {
     transition: .2s ease-in-out;
     cursor: pointer;
+    color: #ffffff;
     text-decoration: underline;
 }
 .UsedSourcesButton:hover {
