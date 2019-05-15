@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
 });
 
 window.addEventListener("blur", function () {
-    document.title = 'Powrót do systemów';
+    document.title = 'Systemy Windows';
 })
 
 window.addEventListener("focus", function () {
