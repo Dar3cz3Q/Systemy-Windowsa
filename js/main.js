@@ -79,7 +79,7 @@ function Show(status) {
 function FirstLoad() {
     $(".SingleContentElement").addClass("HiddenElement");
     document.getElementsByClassName("SingleContentElement")[1].classList.remove("HiddenElement");
-    document.location.href = "#?Geneza-powstania$1";
+    document.location.href = "#Geneza-powstania$1";
     document.getElementsByClassName("SingleMenuElement")[0].classList.add("SingleMenuElement--Clicked");
     setTimeout(function () {
         document.title = "Geneza powstania";
@@ -102,6 +102,6 @@ function ChangeContent() {
     document.getElementsByClassName("SingleContentElement")[system_unique].classList.remove("HiddenElement");
     document.title = number_define[system_unique];
     var url = location.href;
-    url.replace('#', "?");
+    location.href = url.replace('#', "?");
     $(window).scrollTop(0);
 }
