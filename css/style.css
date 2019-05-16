@@ -15,64 +15,58 @@ body {
     width: 50%;
     height: auto;
 }
-.MenuButton {
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    z-index: 100;
-    transition: .2s ease-in-out;
-    cursor: pointer;
-}
-.MenuButton:hover {
-    background-color: #343434;
-    box-shadow: 0px 0px 10px #343434;
-}
-.Menu {
+.MenuContainer {
     position: fixed;
     right: 0px;
-    bottom: 0px;
-    width: 20%;
+    top: 0px;
+    width: 23%;
     height: 100%;
-    z-index: 50;
+    transform: translateX(86%);
+    transition: .5s ease-in-out;
+}
+.MenuButton {
+    position: relative;
+    width: 10%;
+    height: 100%;
+    line-height: 50px;
+    z-index: 100;
+    padding: 10px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    background-color: #010101;
+    border-radius: 100px 0px 0px 100px;
+    font-family: 'Gugi', cursive;
+}
+.MenuButton:hover {
     background-color: #121212;
-    border: 1px solid #111111;
-    box-shadow: 0px 0px 10px #111111;
-    display: none;
+    box-shadow: 0px 0px 10px #121212;
+}
+.MenuButtonLetter {
+    transition: .2s ease-in-out;
+    font-weight: 900;
+    font-size: 42px;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: transparent;
+}
+.MenuButton:hover .MenuButtonLetter {
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: white;
+}
+.Menu {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    z-index: 100;
+    background-color: #010101;
+    border: 1px solid #010101;
+    box-shadow: 0px 0px 10px #010101;
     transition: .35s ease-in-out;
 }
 .MenuUp {
-    display: flex;
-    transform: translateX(100%);
-    animation-name: MenuShowUp;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-}
-@keyframes MenuShowUp {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-.MenuDown {
-    display: flex;
-    animation-name: MenuShowDown;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
     transform: translateX(0%);
 }
-@keyframes MenuShowDown {
-    0% {
-        
-    }
-    100% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
+.MenuDown {
+    transform: translateX(86%);
 }
 .ListContainer {
     width: 100%;
@@ -94,11 +88,14 @@ body {
 .SingleMenuElement:hover {
     background-color: #ffffff;
     color: #111111;
+    border: 1px solid #ffffff;
     box-shadow: 0px 0px 10px #ffffff;
 }
 .SingleMenuElement--Clicked {
     background-color: #0074FF;
+    border: 1px solid #0074FF;
     color: #ffffff;
+    font-weight: 900;
     box-shadow: 0px 0px 10px #0074FF;
     z-index: -50;
 }

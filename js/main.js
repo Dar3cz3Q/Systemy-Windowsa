@@ -53,29 +53,26 @@ function SetListeners() {
 }
 
 function ShowMenu() {
-    if ($(".Menu").is(":hidden")) {
+    var position = $(".MenuContainer").data("menu");
+    if (position === "Hidden") {
         Show(true);
     } else {
         Show(false)
     }
 }
 
-function Show(status, unique) {
+function Show(status) {
     if (status === true) {
-        $(".Menu").addClass("MenuUp");
-        $(".Menu").removeClass("MenuDown");
-        $(".MenuButton").html(`<i class="icon-cancel"></i>`);
+        $(".MenuContainer").addClass("MenuUp");
+        $(".MenuContainer").removeClass("MenuDown");
+        $(".MenuContainer").data("menu", "Vision");
     } else {
-        if (unique === 0) {
-
-        } else {
-            $(".Menu").addClass("MenuDown");
-            $(".Menu").removeClass("MenuUp");
-            setTimeout(function () {
-                $(".Menu").removeClass("MenuDown");
-            }, 500);
-            $(".MenuButton").html(`<i class="icon-menu"></i>`);
-        }
+        $(".MenuContainer").addClass("MenuDown");
+        $(".MenuContainer").removeClass("MenuUp");
+        setTimeout(function () {
+            $(".MenuContainer").removeClass("MenuDown");
+            $(".MenuContainer").data("menu", "Hidden");
+        }, 500);
     }
 }
 
@@ -98,7 +95,7 @@ function ChangeContent() {
         $(this).addClass("SingleMenuElement--Clicked");
     }
 
-    Show(false, system_unique);
+    Show(false);
 
     $(".SingleContentElement").addClass("HiddenElement");
 
