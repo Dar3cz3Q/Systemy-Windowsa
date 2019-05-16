@@ -101,5 +101,7 @@ function ChangeContent() {
 
     document.getElementsByClassName("SingleContentElement")[system_unique].classList.remove("HiddenElement");
     document.title = number_define[system_unique];
+    var url = location.href;
+    url.replace("#", "");
     $(window).scrollTop(0);
 }
