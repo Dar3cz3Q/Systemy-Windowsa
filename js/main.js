@@ -66,9 +66,11 @@ function Show(status) {
         $(".MenuContainer").addClass("MenuUp");
         $(".MenuContainer").removeClass("MenuDown");
         $(".MenuContainer").data("menu", "Vision");
+        $(".MenuButtonLetter").addClass("MenuButton--Clicked");
     } else {
         $(".MenuContainer").addClass("MenuDown");
         $(".MenuContainer").removeClass("MenuUp");
+        $(".MenuButtonLetter").removeClass("MenuButton--Clicked");
         setTimeout(function () {
             $(".MenuContainer").removeClass("MenuDown");
             $(".MenuContainer").data("menu", "Hidden");

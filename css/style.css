@@ -50,8 +50,14 @@ body {
     -webkit-text-fill-color: transparent;
 }
 .MenuButton:hover .MenuButtonLetter {
-    -webkit-text-stroke: 1px white;
-    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    text-shadow: 0px 0px 10px #ffffff;
+}
+.MenuButton--Clicked {
+    -webkit-text-stroke: 1px #0074FF!important;
+    -webkit-text-fill-color: #0074FF!important;
+    text-shadow: 0px 0px 10px #0074FF!important;
 }
 .Menu {
     position: relative;
