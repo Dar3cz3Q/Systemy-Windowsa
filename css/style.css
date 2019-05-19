@@ -45,7 +45,7 @@ body {
 .MenuButtonLetter {
     transition: .5s ease-in-out;
     font-weight: 900;
-    font-size: 42px;
+    font-size: 50px;
     -webkit-text-stroke: 1px white;
     -webkit-text-fill-color: transparent;
     padding: 10px 0px;
@@ -53,6 +53,7 @@ body {
 .ChangingElement {
     transition: 1s transform ease-in-out;
     padding: 15px 0px;
+    -webkit-text-stroke: 3px #ffffff;
 }
 .ChangingElement--ToHide {
     transform: rotate(180deg);
