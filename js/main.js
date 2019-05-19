@@ -67,10 +67,12 @@ function Show(status) {
         $(".MenuContainer").removeClass("MenuDown");
         $(".MenuContainer").data("menu", "Vision");
         $(".MenuButtonLetter").addClass("MenuButton--Clicked");
+        $(".ChangingElement").addClass("ChangingElement--ToHide");
     } else {
         $(".MenuContainer").addClass("MenuDown");
         $(".MenuContainer").removeClass("MenuUp");
         $(".MenuButtonLetter").removeClass("MenuButton--Clicked");
+        $(".ChangingElement").removeClass("ChangingElement--ToHide");
         setTimeout(function () {
             $(".MenuContainer").removeClass("MenuDown");
             $(".MenuContainer").data("menu", "Hidden");
