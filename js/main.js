@@ -53,7 +53,7 @@ function SetListeners() {
         var single_menu_button = document.getElementsByClassName("SingleMenuElement")[i];
         single_menu_button.addEventListener("click", ChangeContent);
     }
-    for (i = 0; i < 22; i++) {
+    for (i = 0; i < 23; i++) {
         var postscript_button = document.getElementsByClassName("PostScriptElement")[i];
         postscript_button.addEventListener("click", CheckPostScript);
         var postscript_exitbutton = document.getElementsByClassName("ExitIcon")[i];
