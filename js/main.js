@@ -1,5 +1,6 @@
 const number_define = [
     "Wykorzystane źródła",
+    "Skorowidz",
     "Geneza powstania",
     "Windows 3.0",
     "OS/2",
@@ -46,9 +47,17 @@ function SetListeners() {
     menu_button.addEventListener("click", ShowMenu);
     var source_button = document.getElementsByClassName("UsedSourcesButton")[0];
     source_button.addEventListener("click", ChangeContent);
+    var index_button = document.getElementsByClassName("IndexButton")[0];
+    index_button.addEventListener("click", ChangeContent);
     for (i = 0; i < 15; i++) {
         var single_menu_button = document.getElementsByClassName("SingleMenuElement")[i];
         single_menu_button.addEventListener("click", ChangeContent);
+    }
+    for (i = 0; i < 22; i++) {
+        var postscript_button = document.getElementsByClassName("PostScriptElement")[i];
+        postscript_button.addEventListener("click", CheckPostScript);
+        var postscript_exitbutton = document.getElementsByClassName("ExitIcon")[i];
+        postscript_exitbutton.addEventListener("click", CheckPostScript);
     }
 }
 
@@ -57,7 +66,7 @@ function ShowMenu() {
     if (position === "Hidden") {
         Show(true);
     } else {
-        Show(false)
+        Show(false);
     }
 }
 
@@ -82,7 +91,7 @@ function Show(status) {
 
 function FirstLoad() {
     $(".SingleContentElement").addClass("HiddenElement");
-    document.getElementsByClassName("SingleContentElement")[1].classList.remove("HiddenElement");
+    document.getElementsByClassName("SingleContentElement")[2].classList.remove("HiddenElement");
     document.location.href = "#Geneza-powstania$1";
     document.getElementsByClassName("SingleMenuElement")[0].classList.add("SingleMenuElement--Clicked");
     setTimeout(function () {
@@ -95,15 +104,40 @@ function ChangeContent() {
     $(".SingleMenuElement").removeClass("SingleMenuElement--Clicked");
     if (system_unique === 0) {
 
+    } else if (system_unique === 1) {
+        Show(true);
     } else {
         $(this).addClass("SingleMenuElement--Clicked");
+        Show(false);
     }
-
-    Show(false);
 
     $(".SingleContentElement").addClass("HiddenElement");
 
     document.getElementsByClassName("SingleContentElement")[system_unique].classList.remove("HiddenElement");
     document.title = number_define[system_unique];
     $(window).scrollTop(0);
+}
+
+function CheckPostScript() {
+    var script_check = $(".AdditionalDescriptionContainer").data("visibility");
+    var script_unique = $(this).data("script");
+    if (script_check === "Hidden") {
+        ShowPostScript(true, script_unique);
+    } else {
+        ShowPostScript(false);
+    }
+}
+
+function ShowPostScript(visibility, unique) {
+    if (visibility === true) {
+        $(".AdditionalDescription").addClass("HiddenElement");
+        document.getElementsByClassName("AdditionalDescription")[unique].classList.remove("HiddenElement");
+        $(".AdditionalDescriptionHidder").addClass("FlexStyle");
+        $(".AdditionalDescriptionContainer").addClass("FlexStyle");
+        $(".AdditionalDescriptionContainer").data("visibility", "Showed");
+    } else {
+        $(".AdditionalDescriptionHidder").removeClass("FlexStyle");
+        $(".AdditionalDescriptionContainer").removeClass("FlexStyle");
+        $(".AdditionalDescriptionContainer").data("visibility", "Hidden");
+    }
 }
