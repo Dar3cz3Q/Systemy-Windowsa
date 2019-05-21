@@ -103,7 +103,7 @@ function ChangeContent() {
     var system_unique = $(this).data("system");
     $(".SingleMenuElement").removeClass("SingleMenuElement--Clicked");
     if (system_unique === 0) {
-
+        Show(false);
     } else if (system_unique === 1) {
         Show(true);
     } else {
